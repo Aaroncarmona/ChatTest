@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.gmail.chattest"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            multiDexKeepFile file('multidex-config.txt')
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+ext {
+    androidx = "1.0.0-beta01"
+    material = "1.0.0-beta01"
+
+    firebase_core = "16.0.1"
+    firebase_firestore = "17.0.4"
+    firebase_storage = "16.0.1"
+    firebase_auth = "16.0.2"
+
+    room = "2.1.0-alpha02"
+
+
+    rx_android = "2.1.0"
+    rx_java = "2.2.0"
+    butter_knife = "10.0.0"
+    multidex = "2.0.0"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.appcompat:appcompat:$androidx"
+    implementation "com.google.android.material:material:$material"
+
+    implementation "com.google.firebase:firebase-core:$firebase_core"
+    implementation "com.google.firebase:firebase-firestore:$firebase_firestore"
+    implementation "com.google.firebase:firebase-storage:$firebase_storage"
+    implementation "com.google.firebase:firebase-auth:$firebase_auth"
+
+    implementation "androidx.room:room-rxjava2:$room"
+    implementation "androidx.room:room-runtime:$room"
+    annotationProcessor "androidx.room:room-compiler:$room" // use kapt for Kotlin
+
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android"
+    implementation "io.reactivex.rxjava2:rxjava:$rx_java"
+
+    implementation "com.jakewharton:butterknife:$butter_knife"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butter_knife"
+
+
+    implementation "androidx.multidex:multidex:$multidex"
+}

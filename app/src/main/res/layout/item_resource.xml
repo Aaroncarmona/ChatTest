@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:text="NOMBRE DEL ARCHIVO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cargando..."
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:text="RUTA LOCAL:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_path_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cargando..."
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:text="RUTA REMOTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_path_remote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cargando..."
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:text="TIPO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cargando..."
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:text="ESTA EN CLOUD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_remote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cargando..."
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:text="TAMAÑO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cargando..."/>
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
